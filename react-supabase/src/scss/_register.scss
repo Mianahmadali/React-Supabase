@@ -1,0 +1,53 @@
+.register {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: #f0f2f5;
+
+  .card {
+    width: 100%;
+    max-width: 500px;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+
+    .ant-form-item-label > label {
+      font-weight: 600;
+    }
+
+    .ant-input,
+    .ant-input-password {
+      border-radius: 8px;
+    }
+
+    .btn,
+    .ant-btn {
+      height: 45px;
+      font-weight: 600;
+      border-radius: 8px;
+    }
+
+    .or-divider {
+      position: relative;
+
+      &::before,
+      &::after {
+        content: '';
+        height: 1px;
+        background: #ccc;
+        position: absolute;
+        top: 50%;
+        width: 40%;
+      }
+
+      &::before {
+        left: 0;
+      }
+
+      &::after {
+        right: 0;
+      }
+    }
+  }
+}

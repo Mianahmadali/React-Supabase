@@ -1,0 +1,152 @@
+// src/scss/pages/auth/_login.scss
+
+// Card Container
+.auth-card {
+  max-width: 450px;
+  margin: 0 auto;
+  padding: 2.5rem;
+  background: rgb(253, 253, 253);
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+  }
+
+  // Title Styling
+  .ant-typography {
+    color: #2c3e50;
+    margin-bottom: 1.5rem !important;
+    font-weight: 600;
+  }
+
+  // Form Elements
+  .ant-form {
+    .ant-form-item {
+      margin-bottom: 1.25rem;
+
+      .ant-form-item-label > label {
+        color: #5a6a85;
+        font-weight: 500;
+      }
+
+      .ant-input-affix-wrapper {
+        padding: 0.75rem 1rem;
+        border-radius: 8px;
+        border: 1px solid #e0e6ed;
+        transition: all 0.3s;
+
+        &:hover {
+          border-color: #4361ee;
+        }
+
+        &:focus-within {
+          border-color: #4361ee;
+          box-shadow: 0 0 0 2px rgba(67, 97, 238, 0.1);
+        }
+
+        .ant-input-prefix {
+          margin-right: 0.75rem;
+          color: #7d8fb3;
+        }
+
+        input {
+          font-size: 15px;
+
+          &::placeholder {
+            color: #b8c2cc;
+          }
+        }
+      }
+    }
+
+    // Links Section
+    .d-flex {
+      margin-bottom: 1.5rem;
+
+      a {
+        color: #7d8fb3;
+        font-size: 0.85rem;
+        transition: color 0.2s;
+
+        &:hover {
+          color: #4361ee;
+          text-decoration: underline;
+        }
+      }
+    }
+
+    // Login Button
+    .ant-btn {
+      height: 48px;
+      border-radius: 8px;
+      font-weight: 500;
+      font-size: 15px;
+      transition: all 0.3s;
+
+      &-primary {
+        background: #4361ee;
+        border-color: #4361ee;
+        box-shadow: 0 4px 6px rgba(67, 97, 238, 0.2);
+
+        &:hover {
+          background: #3a56d4;
+          transform: translateY(-1px);
+          box-shadow: 0 6px 10px rgba(67, 97, 238, 0.3);
+        }
+
+        &:active {
+          transform: translateY(0);
+        }
+      }
+    }
+  }
+
+  // Divider
+  .text-center {
+    color: #b8c2cc;
+    font-size: 0.85rem;
+    margin: 1.5rem 0;
+    position: relative;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      width: 42%;
+      height: 1px;
+      background: #e0e6ed;
+    }
+
+    &::before {
+      left: 0;
+    }
+
+    &::after {
+      right: 0;
+    }
+  }
+
+  // Google Button
+  .ant-btn-default {
+    border: 1px solid #e0e6ed;
+    color: #5a6a85;
+
+    &:hover {
+      color: #4361ee;
+      border-color: #4361ee;
+      background: rgba(67, 97, 238, 0.03);
+    }
+  }
+}
+
+// Responsive Adjustments
+@media (max-width: 576px) {
+  .auth-card {
+    padding: 1.75rem;
+    margin: 0 1rem;
+  }
+}
