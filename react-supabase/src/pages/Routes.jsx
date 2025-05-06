@@ -4,6 +4,7 @@ import Frontend from './Frontend'
 import Auth from './Auth'
 import Dashboard from './Dashboard'
 import Nopage from './Misc/Nopage'
+import CreateTodo from './Dashboard/Home/CreateTodo'
 
 const index = () => {
   return (
@@ -12,6 +13,7 @@ const index = () => {
         <Route path="/auth/*" element={<Auth />} />
         <Route path='/dashboard/*' element = {<Dashboard/>}/>
         <Route path='*' element = {<Nopage/>}/>
+        <Route path="/dashboard/create-todo" element={<CreateTodo />} />
         </Routes></>
   )
 }
